@@ -1,0 +1,56 @@
+Prefix(:=<http://www.adnis.org/ontologies/2019/nomenclatures/test/prototype/annotations#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.adnis.org/ontologies/2019/nomenclatures/test/prototype/annotations>
+<http://www.adnis.org/ontologies/2019/nomenclatures/test/prototype/annotations/1.0>
+
+Declaration(AnnotationProperty(:conceptExemple))
+Declaration(AnnotationProperty(:defClasse))
+Declaration(AnnotationProperty(:defConcept))
+Declaration(AnnotationProperty(:noteInfoMedh))
+Declaration(AnnotationProperty(:peutAvoirIndividus))
+Declaration(AnnotationProperty(:requeteSQL))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: :conceptExemple (Exemple de concept)
+
+AnnotationAssertion(rdfs:comment :conceptExemple "Sert à enrichir la définition d'un concept"@fr)
+AnnotationAssertion(rdfs:label :conceptExemple "Exemple de concept"@fr)
+SubAnnotationPropertyOf(:conceptExemple :noteInfoMedh)
+
+# Annotation Property: :defClasse (Définition de la classe)
+
+AnnotationAssertion(rdfs:comment :defClasse "Explication de la définition d'une classe"@fr)
+AnnotationAssertion(rdfs:label :defClasse "Définition de la classe"@fr)
+SubAnnotationPropertyOf(:defClasse :noteInfoMedh)
+
+# Annotation Property: :defConcept (Définiton du concept)
+
+AnnotationAssertion(rdfs:label :defConcept "Définiton du concept"@fr)
+SubAnnotationPropertyOf(:defConcept :noteInfoMedh)
+
+# Annotation Property: :noteInfoMedh (Note InfoMedh)
+
+AnnotationAssertion(rdfs:comment :noteInfoMedh "Annotation utilisable sur tout type d'entité"@fr)
+AnnotationAssertion(rdfs:label :noteInfoMedh "Note InfoMedh"@fr)
+
+# Annotation Property: :peutAvoirIndividus (Peut avoir des individus)
+
+AnnotationAssertion(rdfs:comment :peutAvoirIndividus "Indique qu'une classe peut avoir des individus"@fr)
+AnnotationAssertion(rdfs:label :peutAvoirIndividus "Peut avoir des individus"@fr)
+SubAnnotationPropertyOf(:peutAvoirIndividus :noteInfoMedh)
+
+# Annotation Property: :requeteSQL (:requeteSQL)
+
+SubAnnotationPropertyOf(:requeteSQL :noteInfoMedh)
+
+
+
+)
